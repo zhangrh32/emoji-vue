@@ -21,10 +21,35 @@ export default {
       comment: '',
     }
   },
+  mounted () {
+    // 一页emoji的个数 轮播
+    // let num = 27
+    // let start = 0
+    // let end = num
+    // for (var i = 1; i < Math.ceil(this.$emoji.length / num) + 1; i++) {
+    //   let str = {
+    //     swipe: []
+    //   }
+    //   start = num * (i - 1)
+    //   end = num * i
+    //   str.swipe.push(this.$emoji.slice(start, end))
+    //   this.list.push(str)
+    // }
+  },
   methods: {
     handleEmotion (i) {
       this.content += i
     },
+    // 删除一个表情
+    // delEmoji () {
+    //   let dom = document.getElementById('content')
+    //   let strPos = dom.selectionStart
+    //   if (this.from.message.length > 0) {
+    //     let newMsg = this.from.message.substring(0, strPos)
+    //     let endMsg = this.from.message.substring(strPos, this.from.message.length)
+    //     this.from.message = this.$delEmoji(dom, newMsg, strPos, endMsg)
+    //   }
+    // },
     // 将匹配结果替换表情图片
     emotion (res) {
       let word = res.replace(/\#|\;/gi,'')
